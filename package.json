@@ -1,0 +1,27 @@
+{
+  "name": "full-stack-engineer-tech-test",
+  "version": "0.0.1",
+  "description": "Technical assessment for full stack engineer interviewees",
+  "scripts": {
+    "install": "npm run client:install && npm run server:install",
+    "start": "concurrently -n server,client -c blueBright,green npm:server:start npm:client:start",
+    "client:install": "cd client && npm install",
+    "client:start": "cd client && npm start",
+    "server:install": "cd server && npm install",
+    "server:start": "cd server && npm start",
+    "server:test": "cd server && npm test",
+    "migrate": "cd server && npm run migrate",
+    "rollback": "cd server && npm run rollback",
+    "seed": "cd server && npm run seed",
+    "test": "npm run server:test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tungsten.filament.uk.com/company/technical-evaluation/full-stack-engineer-tech-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
